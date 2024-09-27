@@ -30,6 +30,7 @@ import HackAndSlash from './modules/talents/HackAndSlash';
 import SuddenDeath from './modules/talents/SuddenDeath';
 import Warpaint from './modules/talents/Warpaint';
 import Channeling from 'parser/shared/normalizers/Channeling';
+import UnhingedNormalizer from '../shared/modules/normalizers/UnhingedNormalizer';
 
 class CombatLogParser extends CoreCombatLogParser {
   static specModules = {
@@ -40,6 +41,7 @@ class CombatLogParser extends CoreCombatLogParser {
     generateRageEventsNormalizer: GenerateRageEventsNormalizer,
     rageAttributeNormalizer: RageAttributeNormalizer,
     coldSteelHotBloodNormalizer: ColdSteelHotBloodNormalizer,
+    unhingedNormalizer: UnhingedNormalizer,
 
     enrageRefreshNormalizer: EnrageRefreshNormalizer,
     enrageBeforeBloodthirst: EnrageBeforeBloodthirst,
