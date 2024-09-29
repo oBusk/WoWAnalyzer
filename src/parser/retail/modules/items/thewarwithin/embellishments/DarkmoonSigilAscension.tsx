@@ -8,6 +8,7 @@ import STAT, { getIcon, getName } from 'parser/shared/modules/features/STAT';
 import { formatDuration, formatPercentage } from 'common/format';
 import SpellLink from 'interface/SpellLink';
 import StatTracker, { StatBuff } from 'parser/shared/modules/StatTracker';
+import { Fragment } from 'react/jsx-runtime';
 
 // stat gain doesn't appear to scale with item level or embellishment rank
 const STAT_GAIN_PER_STACK = 89;
@@ -194,21 +195,19 @@ class DarkmoonSigilAscension extends EmbellishmentAnalyzer.withDependencies({
             const totalAmount = Math.round(entry.total / entry.procs);
 
             return (
-              <>
-                <p>
-                  The <SpellLink spell={buff.spell} /> {statName} buff gave <StatIcon />{' '}
-                  <b>{totalAmount}</b> {statName}, and had a total uptime of{' '}
-                  <b>{formatDuration(entry.duration)}</b>, {formatPercentage(uptimePercentage, 1)}%
-                  of the fight.
-                </p>
-              </>
+              <p key={spellId}>
+                The <SpellLink spell={buff.spell} /> {statName} buff gave <StatIcon />{' '}
+                <b>{totalAmount}</b> {statName}, and had a total uptime of{' '}
+                <b>{formatDuration(entry.duration)}</b>, {formatPercentage(uptimePercentage, 1)}% of
+                the fight.
+              </p>
             );
           })}
         </>
       ),
       content: (
         <>
-          {averageStats.map((entry) => {
+          {averageStats.map((entry, index) => {
             const stat = entry.stat as STAT;
             const StatIcon = getIcon(stat);
             const statName = getName(stat);
@@ -217,11 +216,9 @@ class DarkmoonSigilAscension extends EmbellishmentAnalyzer.withDependencies({
             const calculatedAverage = Math.round(totalAmount * uptimePercentage);
 
             return (
-              <>
-                <p>
-                  <StatIcon /> {calculatedAverage} <small>{statName} over time</small>
-                </p>
-              </>
+              <p key={index}>
+                <StatIcon /> {calculatedAverage} <small>{statName} over time</small>
+              </p>
             );
           })}
         </>

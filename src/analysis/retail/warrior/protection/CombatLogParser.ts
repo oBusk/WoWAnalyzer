@@ -1,5 +1,6 @@
 import CoreCombatLogParser from 'parser/core/CombatLogParser';
 
+import RavagerNormalizer from '../shared/modules/normalizers/RavagerNormalizer';
 import Abilities from './modules/Abilities';
 import Haste from './modules/core/Haste';
 import RageDetails from './modules/core/RageDetails';
@@ -40,6 +41,7 @@ import ProtFourPiece from './modules/items/tier30/ProtFourPiece';
 class CombatLogParser extends CoreCombatLogParser {
   static specModules = {
     // Normalizer
+    // ravagerNormalizer: RavagerNormalizer,
     rageGenerationNormalizer: RageGenerationNormalizer,
 
     // Core

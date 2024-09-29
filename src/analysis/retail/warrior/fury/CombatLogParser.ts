@@ -3,6 +3,7 @@ import WindfuryLinkNormalizer from 'parser/shared/normalizers/WindfuryLinkNormal
 import RageGraph from '../shared/modules/core/RageGraph';
 import RageTracker from '../shared/modules/core/RageTracker';
 import RageCountDebugger from '../shared/modules/debuggers/RageCountDebugger';
+import RavagerNormalizer from '../shared/modules/normalizers/RavagerNormalizer';
 import GenerateRageEventsNormalizer from '../shared/modules/normalizers/rage/GenerateRageEventsNormalizer';
 import RageAttributeNormalizer from '../shared/modules/normalizers/rage/RageAttributeNormalizer';
 import ResourceChangeNormalizer from '../shared/modules/normalizers/rage/ResourceChangeNormalizer';
@@ -37,6 +38,7 @@ class CombatLogParser extends CoreCombatLogParser {
     // Normalizers
     windfuryNormalizer: WindfuryLinkNormalizer,
 
+    // ravagerNormalizer: RavagerNormalizer,
     resourceChangeNormalizer: ResourceChangeNormalizer,
     generateRageEventsNormalizer: GenerateRageEventsNormalizer,
     rageAttributeNormalizer: RageAttributeNormalizer,

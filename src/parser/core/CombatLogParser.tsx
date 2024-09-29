@@ -213,14 +213,14 @@ class CombatLogParser {
     otherRacials: OtherRacials,
 
     // Items:
-    authorityOfRadiantPower: AuthorityOfRadiantPower,
-    authorityOfStorms: AuthorityOfStorms,
-    stormridersFury: StormridersFury,
-    authorityOfTheDepths: AuthorityOfTheDepths,
-    signetOfThePriory: SignetOfThePriory,
+    // authorityOfRadiantPower: AuthorityOfRadiantPower,
+    // authorityOfStorms: AuthorityOfStorms,
+    // stormridersFury: StormridersFury,
+    // authorityOfTheDepths: AuthorityOfTheDepths,
+    // signetOfThePriory: SignetOfThePriory,
 
     // Embellishments
-    darkmoonSigilAscension: DarkmoonSigilAscension,
+    // darkmoonSigilAscension: DarkmoonSigilAscension,
 
     // Enchants
     burningDevotion: BurningDevotion,

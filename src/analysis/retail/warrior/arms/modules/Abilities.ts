@@ -147,6 +147,20 @@ class Abilities extends CoreAbilities {
         buffSpellId: SPELLS.BLADESTORM.id,
       },
       {
+        spell: TALENTS.RAVAGER_TALENT.id,
+        category: SPELL_CATEGORY.ROTATIONAL_AOE,
+        cooldown: 1.5 * 60,
+        gcd: {
+          base: 1500,
+        },
+        castEfficiency: {
+          suggestion: true,
+          recommendedEfficiency: 0.9,
+        },
+        enabled: combatant.hasTalent(TALENTS.RAVAGER_TALENT),
+        buffSpellId: TALENTS.RAVAGER_TALENT.id,
+      },
+      {
         spell: TALENTS.CHAMPIONS_SPEAR_TALENT.id,
         category: SPELL_CATEGORY.ROTATIONAL_AOE,
         cooldown: 90,

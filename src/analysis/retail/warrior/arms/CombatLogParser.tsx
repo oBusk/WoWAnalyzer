@@ -7,6 +7,7 @@ import RageCountDebugger from '../shared/modules/debuggers/RageCountDebugger';
 import GenerateRageEventsNormalizer from '../shared/modules/normalizers/rage/GenerateRageEventsNormalizer';
 import RageAttributeNormalizer from '../shared/modules/normalizers/rage/RageAttributeNormalizer';
 import ResourceChangeNormalizer from '../shared/modules/normalizers/rage/ResourceChangeNormalizer';
+import RavagerNormalizer from '../shared/modules/normalizers/RavagerNormalizer';
 import UnhingedNormalizer from '../shared/modules/normalizers/UnhingedNormalizer';
 import ChampionsMight from '../shared/modules/talents/ChampionsMight';
 import ChampionsSpear from '../shared/modules/talents/ChampionsSpear';
@@ -56,6 +57,7 @@ class CombatLogParser extends CoreCombatLogParser {
     // Normalizers
     windfuryNormalizer: WindfuryLinkNormalizer,
 
+    // ravagerNormalizer: RavagerNormalizer,
     finishingBlowsResourceChange: FinishingBlowsResourceChange,
     desourceChangeNormalizer: ResourceChangeNormalizer,
     generateRageEventsNormalizer: GenerateRageEventsNormalizer,

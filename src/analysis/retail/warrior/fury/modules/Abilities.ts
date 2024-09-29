@@ -141,6 +141,20 @@ class Abilities extends CoreAbilities {
         },
       },
       {
+        spell: TALENTS.RAVAGER_TALENT.id,
+        category: SPELL_CATEGORY.ROTATIONAL_AOE,
+        cooldown: 1.5 * 60,
+        gcd: {
+          base: 1500,
+        },
+        castEfficiency: {
+          suggestion: true,
+          recommendedEfficiency: 0.9,
+        },
+        enabled: combatant.hasTalent(TALENTS.RAVAGER_TALENT),
+        buffSpellId: TALENTS.RAVAGER_TALENT.id,
+      },
+      {
         spell: SPELLS.AVATAR_SHARED.id,
         enabled: combatant.hasTalent(TALENTS.AVATAR_SHARED_TALENT),
         category: SPELL_CATEGORY.COOLDOWNS,
